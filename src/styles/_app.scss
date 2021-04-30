@@ -1,0 +1,30 @@
+@import './variables';
+@import './base';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    &:focus {
+        outline: none;
+    }
+}
+
+html{
+    @include flex-row-center;
+    @include color;
+    min-height: 100vh;
+}
+
+.main {
+    @include flex-column-center;
+    @include color;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 100vh;
+    transition: .5s ease-in-out;
+    overflow: auto;
+}
